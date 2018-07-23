@@ -1,6 +1,8 @@
 ---
 - name: install versions
-  shell: bash -lc "nvm install {{ item }}"
+  shell: ". {{ nvm_root }}/nvm.sh && nvm install {{ item }}"
+  args: 
+    executable: /bin/bash
   register: output
   changed_when: "'already installed.' not in output.stderr"
   with_items: "{{ nvm_node_versions }}"

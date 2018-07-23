@@ -1,9 +1,11 @@
 ---
-nvm_default_node_version: v0.12.7
-nvm_version: v0.31.6
-nvm_node_versions:
-  - v0.12.7
-  - v0.10.36
-nvm_global_packages:: []
+nvm_env: user
+nvm_version: v0.33.11
 nvm_users:
-  - vagrant
+  - katja
+nvm_node_versions:
+  - v8.0
+  - v0.10
+nvm_default_node_version: v8.0
+nvm_global_packages: 
+  - grunt-cli
